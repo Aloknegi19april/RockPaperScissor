@@ -1,0 +1,62 @@
+body {
+  background-image: url('Images/kvsg.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #2BB2BB;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#main {
+  margin: 5% 15% 7%;
+}
+
+.title {
+  font-size: 5rem;
+  font-family: 'Sacramento', cursive;
+  color: #2BB2BB;
+  font-weight: bolder;
+}
+
+.play {
+  color: #2BB2BB;
+}
+
+.container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.left {
+  text-align: center;
+}
+
+#result {
+  margin-top: 2rem;
+}
+
+.winner {
+  font-size: 3rem;
+  color: #00BCD4;
+  font-family: 'VT323', monospace;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 900px) {
+  body {
+    background-image: url('Images/bckgrnd.png');
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}

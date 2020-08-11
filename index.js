@@ -1,6 +1,9 @@
+var count1 = 0;
+var count2 = 0;
+
 function selectImage(){
 
-  if(document.querySelector("button i").classList[1]=="fa-play" ||document.querySelector("button i").classList[2]=="fa-play" )
+  if(document.querySelector("button i").classList[1]=="fa-play" || document.querySelector("button i").classList[2]=="fa-play" )
     {
       document.querySelector("button i").classList.remove("fa-play");
       document.querySelector("button i").classList.add("fa-pause");
@@ -29,25 +32,54 @@ function selectImage(){
   document.querySelectorAll("img")[1].setAttribute("src", imageSource2 );
 
 
-  if(randomNumber1 == 1 && randomNumber2 == 2)
+  if(randomNumber1 == 1 && randomNumber2 == 2){
     document.querySelector("h2").innerHTML = "🏆 Player 1 wins!!!";
+    count1++;
+    document.querySelector("#player1").innerHTML = count1;
+  }
 
-  else if(randomNumber1 == 1 && randomNumber2 == 3)
+  else if(randomNumber1 == 1 && randomNumber2 == 3){
     document.querySelector("h2").innerHTML = "🏆 Player 2 wins!!!";
+    count2++;
+    document.querySelector("#player2").innerHTML = count2;
+  }
 
-  else if(randomNumber1 == 2 && randomNumber2 == 1)
+  else if(randomNumber1 == 2 && randomNumber2 == 1){
     document.querySelector("h2").innerHTML = "🏆 Player 2 wins!!!";
+    count2++;
+    document.querySelector("#player2").innerHTML = count2;
+  }
 
-  else if(randomNumber1 == 2 && randomNumber2 == 3)
+  else if(randomNumber1 == 2 && randomNumber2 == 3){
     document.querySelector("h2").innerHTML = "🏆 Player 1 wins!!!";
+    count1++;
+    document.querySelector("#player1").innerHTML = count1;
+  }
 
-  else if(randomNumber1 == 3 && randomNumber2 == 1)
+  else if(randomNumber1 == 3 && randomNumber2 == 1){
     document.querySelector("h2").innerHTML = "🏆 Player 1 wins!!!";
+    count1++;
+    document.querySelector("#player1").innerHTML = count1;
+  }
 
-  else if(randomNumber1 == 3 && randomNumber2 == 2)
+  else if(randomNumber1 == 3 && randomNumber2 == 2){
     document.querySelector("h2").innerHTML = "🏆 Player 2 wins!!!";
+    count2++;
+    document.querySelector("#player2").innerHTML = count2;
+  }
 
-  else if(randomNumber1 == randomNumber2)
-    document.querySelector("h2").innerHTML = "🏆 Tie!!!";
+  else
+    document.querySelector("h2").innerHTML = "Tie!!!";
 
+    winnerOfGame();
+}
+
+function winnerOfGame()
+{
+  if(count1 > count2)
+    document.querySelector("#win").innerHTML = "Player 1 Winning";
+  else if(count1 < count2)
+    document.querySelector("#win").innerHTML = "Player 2 Winning";
+  else
+    document.querySelector("#win").innerHTML = "Tie";
 }

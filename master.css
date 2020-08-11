@@ -3,6 +3,14 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  background-color: grey;
+  margin: 0;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
 }
 
 p {
@@ -26,6 +34,10 @@ p {
   color: #2BB2BB;
 }
 
+.play:hover {
+  color: #00BCD4;
+}
+
 .container {
   margin-top: 2rem;
   text-align: center;
@@ -36,7 +48,7 @@ p {
 }
 
 #result {
-  margin-top: 2rem;
+  margin: 5% 15% 4%;
 }
 
 .winner {
@@ -45,18 +57,20 @@ p {
   font-family: 'VT323', monospace;
 }
 
-img {
-  width: 150px;
-  height: 150px;
-}
-
 /* For mobile phones: */
 @media only screen and (max-width: 900px) {
   body {
     background-image: url('Images/bckgrnd.png');
+    position: fixed;
+    background-color: white;
   }
 
   .title {
     font-size: 3rem;
+  }
+
+  #result {
+    margin-top: 2rem;
+    text-align: center;
   }
 }
